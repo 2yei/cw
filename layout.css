@@ -1,0 +1,503 @@
+@charset "utf-8";
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+/* 기본 */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Pretendard-Regular';
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+body * {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+}
+
+html { 
+  font-size: 16px;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.clear:after {
+  display: block;
+  content: '';
+  clear: both;
+}
+
+.container-wrap {
+  overflow-x: hidden;
+}
+
+/* 헤더 */
+header {
+  width: 100%;
+  height: 80px;
+  margin: 0 auto;
+  padding: 0 30px;
+  }
+
+/* 로고 */
+.logo {
+  width: 20%;
+  height: 100%;
+}
+
+.logo img {
+  width: 120px;
+  position: relative;
+  top: 18px;
+}
+
+/* 네비 */
+nav {
+  width: 60%;
+  height: 100%;
+  z-index: 10;
+}
+
+.gnb {
+  display: flex;
+  width: 100%;
+  height: 80px;
+  line-height: 80px;
+}
+
+.gnb > li {
+  width: 25%;
+  text-align: center;
+}
+
+.gnb > li > a {
+  font-size: 18px;
+  display: block;
+}
+
+.gnb > li:hover > a {
+  color: #e32024;
+}
+
+.sub {
+  border: 1px solid #aaa;
+  position: relative;
+  z-index: 10;
+  display: none;
+}
+
+.sub > li {
+  height: 50px;
+  line-height: 50px;
+}
+
+.sub li a {
+  display: block;
+  background-color: #fff;
+}
+
+.sub li:last-child {
+  border-bottom: 0;
+}
+
+.sub li a:hover {
+  background-color: #e32024;
+  color: white;
+}
+
+
+/* sns */
+.sns {
+  width: 20%;
+  height: 100%;
+  text-align: right;
+}
+
+.sns i {
+  font-size: 30px;
+  padding-left: 15px;
+  color: #aaa;
+  opacity: 0.7;
+  margin-top: 25px;
+}
+
+.sns i:hover {
+  color: #e32024;
+}
+
+/* 모바일 메뉴 */
+.m-menu {
+  width: 10px;
+  height: 100%;
+  display: none;
+}
+
+/* 모바일 네비 */
+.m-nav {
+  width: 100%;
+  background-color: #f8f8f8;
+  border-top: 1px solid #ccc;
+  box-shadow: 0 3px 5px 0px #e6e6e6;
+  padding: 0 20px;
+  position: absolute;
+  opacity: 0.95;
+  z-index: 10;
+  display: none;
+}
+
+.m-gnb {
+  display: flex;
+  width: 100%;
+}
+
+.m-gnb > li {
+  width: 25%;
+  text-align: center;
+}
+
+.m-gnb > li:last-child {
+  border: none;
+}
+
+.m-gnb > li > a {
+  font-size: 20px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  display: block;
+}
+
+.m-gnb > li:hover > a {
+  color: #e32024;
+}
+
+.m-sub > li:first-child {
+  padding-top: 35px;
+  border-top: 1px solid #d4d4d4;
+}
+
+.m-sub > li {
+  width: 150px;
+  margin: 0 auto;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.m-sub > li:last-child {
+  padding-bottom: 20px;
+}
+
+.m-sub > li > a {
+  font-size: 14px;
+  color: #868686;
+}
+
+.m-sub li a:hover {
+  color: #e32024;
+}
+
+/* 메인 슬라이드 */
+.main-slide {
+  width: 100%;
+  height: 600px;
+  z-index: -1;
+}
+
+.main-slide img {
+  width: 100%;
+  position: relative;
+}
+
+.main-slide > ul > li {
+  position: absolute;
+}
+
+/* 콘텐츠1 */
+.con1-wrap {
+  width: 1320px;
+  height: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+.title {
+  font-size: 45px;
+  color: #e32024;
+  padding-top: 55px;
+}
+
+.con1-wrap > p {
+  font-size: 20px;
+  padding: 30px 0;
+}
+
+.small {
+  display: flex;
+  width: 600px;
+  flex-basis: 100%;
+  align-items: center;
+  color: #aaa;
+  font-size: 14px;
+  margin: 0 auto;
+  padding-bottom: 80px;
+}
+
+.small::before,
+.small::after {
+  content: "";
+  flex-grow: 1;
+  background: #aaa;
+  height: 1px;
+  font-size: 0px;
+  line-height: 0px;
+  margin: 0px 16px;
+}
+
+.con1-imgbox {
+  display: flex;
+}
+
+.imgbox {
+  width: 25%;
+}
+
+
+.imgbox > a {
+  display: inline-block;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  background-color: #f4f4f4;
+  overflow: hidden;
+}
+
+.img img {
+  margin: 0 auto;
+}
+
+.imgbox img:hover {
+  transform: scale(1.1);
+}
+
+.imgbox div > a {
+  font-size: 20px;
+  display: block;
+  padding-top: 20px;
+  color: #e32024;
+}
+
+.imgbox p {
+  font-size: 16px;
+  padding-top: 10px;
+  line-height: 1.4;
+}
+
+
+/* 콘텐츠2 */
+.con2-wrap {
+  width: 100%;
+  height: 1400px;
+  background-color: #eee;
+  background-image: url(../images/main_c2_bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.con2 {
+  width: 1320px;
+  height: 850px;
+  margin: 0 auto;
+  position: relative;
+  top: 200px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.con2 > p {
+  font-size: 20px;
+  padding: 30px 0;
+}
+
+.con2 > .small {
+  font-size: 14px;
+  color: #aaa;
+  padding-bottom: 30px;
+}
+
+.menu > span {
+  padding: 0 20px;
+}
+
+.menu > span a:hover {
+  color: #e32024;
+}
+
+
+/* 슬라이드2 */
+.slide-wrap {
+  padding-top: 30px;
+  position: relative;
+}
+
+.slide {
+  width: 1000px;
+  height: 500px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.slide ul {
+  position: relative;
+}
+
+.slide li {
+  width: 1000px;
+  float: left;
+}
+
+.slide-img {
+  width: 60%;
+}
+
+.slide-txt {
+  width: 40%;
+  height: 500px;
+  text-align: left;
+}
+
+.slide-txt > div {
+  font-size: 32px;
+  color: #e32024;
+  padding-top: 130px;
+}
+
+.slide-txt p {
+  font-size: 18px;
+  padding-top: 30px;
+  line-height: 1.6;
+}
+
+/* 배너 */
+.bnr {
+  width: 1320px;
+  height: 300px;
+  position: relative;
+  top: 200px;
+  margin: 0 auto;
+}
+
+.bnr img {
+  width: 100%;
+  position: absolute;
+  top: 10px;
+}
+
+.bnr-txt {
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  position: absolute;
+  top: 10px;
+  padding-top: 50px;
+}
+
+.bnr-txt div {
+  font-size: 32px;
+  padding-bottom: 22px;
+}
+
+.bnr-txt p {
+  font-size: 20px;
+  padding-bottom: 12px;
+}
+
+.bnr-txt > p > a {
+  font-size: 14px;
+  color: #fff;
+  opacity: 0.8;
+}
+
+.bnr-txt > p > a:hover {
+  opacity: 1;
+}
+
+/* 푸터 */
+footer {
+  width: 100%;
+  height: 230px;
+  margin: 0 auto;
+  padding-top: 15px;
+}
+
+.footer-left {
+  padding-left: 25px;
+}
+
+.footer-right {
+  padding-right: 25px;
+}
+
+.logo2 img {
+  width: 80px;
+  padding: 20px 0;
+}
+
+footer div {
+  font-size: 14px;
+  color: #bbb;
+  padding-bottom: 5px;
+}
+
+.copy {
+  margin-top: 20px;
+}
+
+footer h2 {
+  font-size: 25px;
+  padding-bottom: 12px;
+  text-align: right;
+}
+
+h4 {
+  font-weight: 300;
+}
+
+h4 > span {
+  color: #e65759;
+  padding-left: 10px;
+}
+
+
+.btn {
+  text-align: right;
+  margin-top: 25px;
+  cursor: pointer;
+}
+
+.btn span {
+  border: 1px solid #ddd;
+  padding: 5px;
+  margin-left: 10px;
+  font-size: 10px;
+}
